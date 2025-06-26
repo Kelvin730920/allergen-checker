@@ -2,27 +2,44 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>歐盟過敏原標示計算器</title>
+  <title>過敏原標示計算器</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <h2>歐盟過敏原標示計算器</h2>
-  <label>產品中香精濃度 (%)：
-    <input type="number" id="fragrancePercent" step="0.01">
-  </label><br><br>
+  <h1>化妝品過敏原標示計算器</h1>
 
-  <label>選擇清洗型態：
-    <select id="productType">
-      <option value="rinse">Rinse-off（沖洗型）</option>
-      <option value="leave">Leave-on（免洗型）</option>
-    </select>
-  </label><br><br>
+  <div class="control-panel">
+    <label>產品型態：
+      <select id="productType">
+        <option value="leave">留置型（香水、乳液等）</option>
+        <option value="rinse">沖洗型（洗髮精、沐浴乳等）</option>
+      </select>
+    </label>
 
-  <textarea id="ingredientInput" rows="10" cols="50" placeholder="輸入格式：\nLinalool,2\nLimonene,0.3"></textarea><br><br>
+    <div class="fragrance-count">
+      <button onclick="setFragranceCount(1)">1 支香精</button>
+      <button onclick="setFragranceCount(2)">2 支香精</button>
+      <button onclick="setFragranceCount(3)">3 支香精</button>
+    </div>
 
-  <button onclick="calculate()">計算是否需標示</button>
+    <label>香精在產品中的添加濃度 (%): <input type="number" id="fragrancePercent" value="1.5" step="0.1"></label>
+  </div>
 
-  <h3>結果：</h3>
-  <div id="output"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>成分名稱</th>
+        <th>CAS No.</th>
+        <th class="f1">香精1 含量(%)</th>
+        <th class="f2">香精2 含量(%)</th>
+        <th class="f3">香精3 含量(%)</th>
+        <th>總成品濃度(%)</th>
+        <th>是否需標示</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
 </body>
 </html>
