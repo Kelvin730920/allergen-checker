@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>歐盟過敏原標示計算器</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h2>歐盟過敏原標示計算器</h2>
+  <label>產品中香精濃度 (%)：
+    <input type="number" id="fragrancePercent" step="0.01">
+  </label><br><br>
+
+  <label>選擇清洗型態：
+    <select id="productType">
+      <option value="rinse">Rinse-off（沖洗型）</option>
+      <option value="leave">Leave-on（免洗型）</option>
+    </select>
+  </label><br><br>
+
+  <textarea id="ingredientInput" rows="10" cols="50" placeholder="輸入格式：\nLinalool,2\nLimonene,0.3"></textarea><br><br>
+
+  <button onclick="calculate()">計算是否需標示</button>
+
+  <h3>結果：</h3>
+  <div id="output"></div>
+</body>
+</html>
