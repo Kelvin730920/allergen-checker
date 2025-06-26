@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Linalool",
+    "cas": "78-70-6",
+    "percentInFragrance": 2.0
+  },
+  {
+    "name": "Limonene",
+    "cas": "5989-27-5",
+    "percentInFragrance": 0.3
+  },
+  {
+    "name": "Citral",
+    "cas": "5392-40-5",
+    "percentInFragrance": 0.5
+  },
+  {
+    "name": "Geraniol",
+    "cas": "106-24-1",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Eugenol",
+    "cas": "97-53-0",
+    "percentInFragrance": 0.2
+  },
+  {
+    "name": "Coumarin",
+    "cas": "91-64-5",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Farnesol",
+    "cas": "4602-84-0",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Isoeugenol",
+    "cas": "97-54-1",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Cinnamal",
+    "cas": "104-55-2",
+    "percentInFragrance": 0.2
+  },
+  {
+    "name": "Cinnamyl alcohol",
+    "cas": "104-54-1",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Anise alcohol",
+    "cas": "105-13-5",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Benzyl alcohol",
+    "cas": "100-51-6",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Benzyl benzoate",
+    "cas": "120-51-4",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Benzyl cinnamate",
+    "cas": "103-41-3",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Benzyl salicylate",
+    "cas": "118-58-1",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Amyl cinnamal",
+    "cas": "122-40-7",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Amylcinnamyl alcohol",
+    "cas": "101-85-9",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Butylphenyl methylpropional",
+    "cas": "80-54-6",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Hydroxycitronellal",
+    "cas": "107-75-5",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Hexyl cinnamal",
+    "cas": "101-86-0",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Methyl 2-octynoate",
+    "cas": "111-12-6",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Alpha-isomethyl ionone",
+    "cas": "127-51-5",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Benzyl alcohol",
+    "cas": "100-51-6",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Benzyl salicylate",
+    "cas": "118-58-1",
+    "percentInFragrance": 0.1
+  },
+  {
+    "name": "Methyl Eugenol",
+    "cas": "93-15-2",
+    "percentInFragrance": 0.02
+  },
+  {
+    "name": "Methyldihydrojasmonate",
+    "cas": "24851-98-7",
+    "percentInFragrance": 0.05
+  },
+  {
+    "name": "Cyclamen aldehyde",
+    "cas": "103-95-7",
+    "percentInFragrance": 0.1
+  }
+]
