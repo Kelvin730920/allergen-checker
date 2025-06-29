@@ -18,16 +18,20 @@ function render() {
 
   data.forEach((item, idx) => {
     const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${item.name}</td>
-      <td>${item.cas}</td>
-      ${[1,2,3].map(i =>
-        `<td class="frag${i}" style="${i > fragCount ? 'display:none' : ''}">
-          <input type="number" data-row="${idx}" data-frag="${i}" step="0.01">
-        </td>`).join('')}
-      <td id="final-${idx}">--</td>
-      <td id="label-${idx}">--</td>
-    `;
+    let inputs = '';
+    for (let i = 1; i <= 3; i++) {
+      const show = i <= fragCount ? "" : "display:none";
+      inputs += \`<td class="frag\${i}" style="\${show}">
+        <input type="number" data-row="\${idx}" data-frag="\${i}" step="0.01">
+      </td>\`;
+    }
+    row.innerHTML = \`
+      <td>\${item.name}</td>
+      <td>\${item.cas}</td>
+      \${inputs}
+      <td id="final-\${idx}">--</td>
+      <td id="label-\${idx}">--</td>
+    \`;
     tbody.appendChild(row);
   });
 
@@ -45,12 +49,12 @@ function calculate() {
   data.forEach((_, idx) => {
     let total = 0;
     for (let i = 1; i <= fragCount; i++) {
-      const el = document.querySelector(`input[data-row='${idx}'][data-frag='${i}']`);
+      const el = document.querySelector(\`input[data-row='\${idx}'][data-frag='\${i}']\`);
       const v = parseFloat(el?.value || 0);
       total += (fragrancePercent / fragCount) * (v / 100);
     }
-    document.getElementById(`final-${idx}`).textContent = total.toFixed(4);
-    const label = document.getElementById(`label-${idx}`);
+    document.getElementById(\`final-\${idx}\`).textContent = total.toFixed(4);
+    const label = document.getElementById(\`label-\${idx}\`);
     label.textContent = total >= threshold ? "需標示 ⚠️" : "可免標示 ✅";
     label.style.color = total >= threshold ? "red" : "green";
   });
@@ -61,6 +65,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("productType").addEventListener("change", calculate);
   document.getElementById("fragrancePercent").addEventListener("input", calculate);
   document.getElementById("fragranceCount").addEventListener("change", () => { render(); calculate(); });
-
   loadData("data_eu81.json");
 });
